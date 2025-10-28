@@ -2,7 +2,6 @@ import {
     onAuthReady
 } from "./authentication.js"
 import { db } from "./firebaseConfig.js";
-import { doc, onSnapshot } from "firebase/firestore";
 import { doc, onSnapshot, getDoc } from "firebase/firestore";
 
 // Function to read the quote of the day from Firestore
