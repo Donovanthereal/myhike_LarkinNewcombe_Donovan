@@ -23,22 +23,26 @@
 <site-navbar></site-navbar>
 
     <!-- Main content goes here -->
-    <!-- This is the welcome on the landing page, with a login/signup button -->
+
+<main class="container my-4">
+    <h1>Saved Hikes for <span id="name-goes-here"></span></h1>
+
     <div class="container">
-        <div class=" px-4 py-5 my-5 text-center">
-            <img class="d-block mx-auto mb-4" src="/images/image.jpg" alt="" width="72" height="57">
-            <h1 class="display-5 fw-bold">Welcome to DonovanHikes, <span id="name-goes-here">my friend!</span></h1>
-            <div class="col-lg-6 mx-auto">
-                <p class="lead mb-4">Join a community of hikers looking for new places to explore.</p>
-                <h2>The view is better, together.</h2>
-                <div class="d-grid justify-content-sm-center">
-                    <!-- Make this button clickable, using onclick event listener -->
-                    <button onclick="window.location.href='login.html'" type="button"
-                        class="btn btn-info btn-lg">Login/Signup</button>
-                </div>
+        <div id="hikeCardGroup" class="row row-cols-auto"></div>
+    </div>
+
+    <template id="savedCardTemplate">
+        <div class="card py-2 m-2 bg-light" style="width: 16rem;">
+            <img class="card-image card-img-top" src="..." alt="Hike image" />
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text"></p>
+                <p>Length: <span class="card-length"></span> km</p>
+                <a class="btn btn-primary read-more" href="#">Read More</a>
             </div>
         </div>
-    </div>
+    </template>
+</main>
 
     <!-- our own footer goes here -->
 <site-footer></site-footer>
@@ -46,7 +50,9 @@
     <!---------------------------------------------->
     <!-- Your own JavaScript scripts go here      -->
     <!---------------------------------------------->
+
     <script type="module" src="/src/app.js"></script>
+    <script type="module" src="/src/saved.js"></script>
 
 </body>
 
